@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Deals - Affiliate Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    /* 3D Animated Background */
+    body {
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      perspective: 1000px;
+      overflow-x: hidden;
+    }
+
+    .bg-3d {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.05) 70%);
+      animation: rotateBG 60s linear infinite;
+      transform-origin: center;
+      z-index: -1;
+    }
+
+    @keyframes rotateBG {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      50% { transform: rotateX(360deg) rotateY(360deg); }
+      100% { transform: rotateX(720deg) rotateY(720deg); }
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #007bff;
+    }
+
+    /* Hero Section */
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+    }
+
+    .home h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .home p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-box {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-box:hover {
+      background: #0056b3;
+    }
+
+    /* Sections */
+    .products {
+      padding: 100px 50px;
+      min-height: 100vh;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #333;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      padding: 50px;
+      text-align: center;
+      background: rgba(0,0,0,0.05);
+      color: #333;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 3D Background -->
+  <div class="bg-3d"></div>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Sandesh Top Deals</a>
+    <nav class="navbar">
+      <a href="#mens">Mens</a>
+      <a href="#womens">Womens</a>
+      <a href="#electronics">Electronics</a>
+      <a href="#kids">Kids</a>
+      <a href="#sports">Sports</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#books">Books & Studies</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="home">
+    <div class="home-content">
+      <h1>Shop Smart, Save Big</h1>
+      <p>Find the best deals on top products with exclusive affiliate discounts.</p>
+      <a href="#mens" class="btn-box">Start Shopping</a>
+    </div>
+  </section>
+
+  <!-- Mens Section -->
+  <section id="mens" class="products" style="background-color:#f0f8ff;">
+    <h2 class="section-title">Mens</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71YXzeOuslL._AC_UL320_.jpg" alt="Men's T-shirt">
+        <h3>Levi's Men's Regular Fit T-Shirt</h3>
+        <p class="price">₹899</p>
+        <a href="https://www.amazon.in/dp/B09V3J2WXX?tag=YOUR-AFFILIATE-ID" class="btn-box" target="_blank">Buy on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Womens Section -->
+  <section id="womens" class="products" style="background-color:#f0f8ff;">
+    <h2 class="section-title">Womens</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71t6YcGqGmL._AC_UL320_.jpg" alt="Women's BTS T-shirt">
+        <h3>BTS Oversized Women's T-Shirt</h3>
+        <p class="price">₹5000</p>
+        <a href="https://www.amazon.in/dp/B09QX28M5P?tag=YOUR-AFFILIATE-ID" class="btn-box" target="_blank">Buy on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electronics Section -->
+  <section id="electronics" class="products" style="background-color:#f5fff0;">
+    <h2 class="section-title">Electronics</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71hIfcIPyxS._AC_UL320_.jpg" alt="iPhone 13">
+        <h3>Apple iPhone 13 (128GB)</h3>
+        <p class="price">₹52,999</p>
+        <a href="https://www.amazon.in/dp/B09G9FPGTN?tag=YOUR-AFFILIATE-ID" class="btn-box" target="_blank">Buy on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids Section -->
+  <section id="kids" class="products" style="background-color:#f0fff5;">
+    <h2 class="section-title">Kids</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81gGK8m0eOL._AC_UL320_.jpg" alt="Kids Toy">
+        <h3>Remote Apple 2020 MacBook Pro (13.3-inch, M1, 8GB RAM, 512GB SSD)</h3>
+        <p class="price">₹1,32,900</p>
+        <a href="https://www.amazon.in/dp/B08N5WRWNW?tag=YOUR-AFFILIATE-ID" class="btn-box" target="_blank">Buy on Amazon</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sandesh Top Deals | Affiliate Marketing Store</p>
+    <p>Disclaimer: We may earn a small commission from affiliate links at no extra cost to you.</p>
+  </footer>
+
+</body>
+</html>
+
+
